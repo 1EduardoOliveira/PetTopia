@@ -40,9 +40,9 @@ Projeto desenvolvido como parte da formação **Técnico em Informática pela FA
 
 ## 📚 Documentação
 
-A documentação do projeto está disponível , contendo as especificações e documentação acadêmica do projeto PetTopia.
+A documentação acadêmica do projeto PetTopia está disponível neste repositório, contendo as especificações e documentação do projeto.
 
-[📄 Acessar documentação](./PetTopia Documentação.pdf)
+[📄 Acessar documentação](./PetTopia-Documentacao.pdf)
 
 ## 👨‍💻 Autor
 
