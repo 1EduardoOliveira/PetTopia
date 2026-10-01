@@ -38,6 +38,12 @@ A comunicação com APIs é realizada utilizando **Retrofit** e **OkHttp**, enqu
 
 Projeto desenvolvido como parte da formação **Técnico em Informática pela FAETEC**.
 
+## 📚 Documentação
+
+A documentação do projeto está disponível na pasta [`docs`](./docs), contendo as especificações e documentação acadêmica do projeto PetTopia.
+
+[📄 Acessar documentação](./docs/Documentacao-PetTopia.pdf)
+
 ## 👨‍💻 Autor
 
 **Eduardo Oliveira**
