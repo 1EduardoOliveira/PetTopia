@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorChecked">#FF5722</color> <!-- Cor quando marcado -->
+    <color name="colorUnchecked">#9E9E9E</color> <!-- Cor quando desmarcado -->
+    <color name="cor_icon_erro">#FF0000</color> <!-- Vermelho, por exemplo -->
+
+
+</resources>

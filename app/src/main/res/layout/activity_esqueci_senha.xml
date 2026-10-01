@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_esqueci_senha"
+    android:orientation="vertical"
+    tools:context=".EsqueciSenhaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="80dp">
+
+                <!-- LinearLayout que contém os dois TextViews -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/poppins1"
+                        android:text="Redefinição de Senha"
+                        android:textColor="@color/black"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins1"
+                        android:text="Insira um email válido para receber o Token de Acesso!"
+                        android:textColor="#868182"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!-- ImageButton ao lado dos TextViews -->
+                <ImageButton
+                    android:id="@+id/voltarBtt"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_voltar" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tillemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Insira seu email"
+                android:textColorHint="#9b9e9f"
+                app:boxStrokeColor="#15999b"
+                app:boxStrokeErrorColor="#d0404f"
+                app:cursorColor="#000"
+                app:errorIconTint="@color/cor_icon_erro"
+                app:errorTextColor="#d0404f"
+                app:hintTextColor="#000"
+                app:startIconDrawable="@drawable/email_ic"
+                app:startIconTint="#15999b">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Continuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="#000"
+                android:padding="20dp"
+                android:text="Continuar"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

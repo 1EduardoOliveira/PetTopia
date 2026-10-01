@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.EditarPerfilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/text_cadastro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="28dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"
+                        android:text="Editar Perfil"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_denuncia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:hint="Atualize Seus Dados"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNome"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Nome Completo"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:placeholderText="Ex: João Gomes de Oliveira"
+                        app:startIconDrawable="@drawable/nome_ic"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieNome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Email"
+                        android:textColorHint="#9b9e9f"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:helperText="Campo Obrigatório*"
+                        app:placeholderText="Ex: joaogomes@gmail.com"
+                        app:startIconDrawable="@drawable/email_ic"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCpf"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="CPF"
+                        android:textColorHint="#9b9e9f"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: 111.111.111-11"
+                        app:startIconDrawable="@drawable/cpf_ic"
+                        app:startIconTint="#15999b"
+                        android:enabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieCpf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:textColor="@color/black" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilTelefone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Telefone"
+                        android:textColorHint="#9b9e9f"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:helperText="Campo Obrigatório*"
+                        app:placeholderText="Ex: 21 11111-1111"
+                        app:startIconDrawable="@drawable/telefone_ic"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieTelefone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textColor="@color/black" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/CadastrarBtt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_gradient"
+                        android:fontFamily="@font/roboto"
+                        android:padding="16dp"
+                        android:text="Confirmar"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/RedefinirSenhaBtt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/button_gradient"
+                            android:fontFamily="@font/roboto"
+                            android:padding="16dp"
+                            android:text="Redefinir Senha"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

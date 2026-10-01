@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_verificar_email4"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.VerificarEmailActivity">
+
+    <ImageButton
+        android:id="@+id/btn_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Voltar"
+        android:src="@drawable/ic_voltar" />
+
+    <!-- Título ou Texto Instrução -->
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="270dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="Entre Com Seu Código"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:hint="Digite o código de verificação enviado para o seu e-mail para redefinir sua senha."
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Campo de entrada para os 6 códigos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_code_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:inputType="text"
+            android:maxLength="1"
+            android:padding="12dp"
+            android:textSize="24sp"
+            app:boxStrokeColor="#15999b" />
+    </LinearLayout>
+
+    <!-- Botão para verificar o código -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_verificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_gradient"
+        android:fontFamily="@font/roboto"
+        android:padding="16dp"
+        android:text="Verificar Código"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_renviar_codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:text="Reenviar código"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

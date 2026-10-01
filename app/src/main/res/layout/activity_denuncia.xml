@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="horizontal"
+    tools:context=".activity.DenunciaActivity">
+
+    <include layout="@layout/progress_layout"
+        android:id="@+id/progress"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="40dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/text_denuncia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="28dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"
+                        android:text="Realizar Denuncia"
+                        android:textColor="#000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCep"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="CEP"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: 21655-280"
+                        app:startIconDrawable="@drawable/nome_ic"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieCep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="number"
+                            android:maxLength="8"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLogradouro"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Logradouro"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Rua Francisco de Andrade"
+                        app:startIconDrawable="@drawable/ic_rua"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieLogradouro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/Uf"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="UF"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: RJ"
+                        app:startIconDrawable="@drawable/ic_uf"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieUf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/Cidade"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Cidade"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Rio de Janeiro"
+                        app:startIconDrawable="@drawable/ic_cidade"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieCidade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBairro"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Bairro"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Anchieta"
+                        app:startIconDrawable="@drawable/ic_bairro"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieBairro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilComplemento"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Complemento"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Casa, Apartamento, Condomínio, etc."
+                        app:startIconDrawable="@drawable/ic_casa"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieComplemento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="text"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDenuncia"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:focusableInTouchMode="true"
+                        android:hint="Tipo da Denuncia"
+                        android:textColorHint="#9b9e9f"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Violência ou Abandono"
+                        app:startIconDrawable="@drawable/genero_ic"
+                        app:startIconTint="#15999b">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ComboDenuncia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDescricao"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="28dp"
+                        android:hint="Descrição"
+                        app:boxStrokeColor="#15999b"
+                        app:boxStrokeErrorColor="#d0404f"
+                        app:cursorColor="#000"
+                        app:endIconMode="clear_text"
+                        app:errorIconTint="@color/cor_icon_erro"
+                        app:errorTextColor="#d0404f"
+                        app:helperText="Campo Obrigatório*"
+                        app:helperTextTextColor="#d0404f"
+                        app:hintTextColor="#000"
+                        app:placeholderText="Ex: Preto"
+                        app:startIconDrawable="@drawable/nome_ic"
+                        app:startIconTint="#15999b">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tieDescricao"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:minHeight="100dp"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/black" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/RealizarDenunciasBtt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/button_gradient"
+                        android:fontFamily="@font/roboto"
+                        android:padding="16dp"
+                        android:text="Confirmar"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
